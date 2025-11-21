@@ -19,14 +19,14 @@ export default function PasswordGate({ children }) {
 return (
   <div
     style={{
-      color: "white",            // chữ trắng
       display: "flex",
       flexDirection: "column",
-      alignItems: "center",      // canh giữa ngang
-      justifyContent: "center",  // canh giữa dọc
-      height: "100vh",           // full height viewport
-      textAlign: "center",       // chữ canh giữa
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100vh",
+      textAlign: "center",
       padding: 40,
+      color: "white", // áp dụng cho text bình thường (h2)
     }}
   >
     <h2>Enter Password</h2>
@@ -39,6 +39,9 @@ return (
         borderRadius: "4px",
         border: "1px solid #ccc",
         textAlign: "center",
+        color: "white",           // chữ nhập trong input
+        backgroundColor: "rgba(255,255,255,0.1)", // nền input nhẹ để thấy chữ trắng
+        borderColor: "white",     // viền trắng
       }}
     />
     <button
