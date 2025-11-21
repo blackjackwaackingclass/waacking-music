@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import PasswordGate from "./PasswordGate";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PasswordGate>
+      <App />
+    </PasswordGate>
   </React.StrictMode>,
   document.getElementById("root")
 );
