@@ -21,39 +21,42 @@ return (
     style={{
       display: "flex",
       flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "100vh",
+      alignItems: "center",      // canh giữa ngang
+      justifyContent: "center",  // canh giữa dọc
+      minHeight: "100vh",        // chiếm full height viewport
       textAlign: "center",
-      padding: 40,
-      color: "white", // áp dụng cho text bình thường (h2)
+      padding: "40px",
+      backgroundColor: "purple", // nếu muốn chắc chắn nền tím
     }}
   >
-    <h2>Enter Password</h2>
+    <h2 style={{ color: "white", marginBottom: "20px" }}>Enter Password</h2>
+
     <input
       type="password"
       onChange={(e) => setInput(e.target.value)}
       style={{
         margin: "10px 0",
-        padding: "8px 12px",
-        borderRadius: "4px",
-        border: "1px solid #ccc",
+        padding: "10px 15px",
+        borderRadius: "5px",
+        border: "1px solid white",
+        backgroundColor: "rgba(255,255,255,0.1)",
+        color: "white",           // chữ nhập màu trắng
         textAlign: "center",
-        color: "white",           // chữ nhập trong input
-        backgroundColor: "rgba(255,255,255,0.1)", // nền input nhẹ để thấy chữ trắng
-        borderColor: "white",     // viền trắng
+        outline: "none",
       }}
     />
+
     <button
       onClick={handleLogin}
       style={{
-        padding: "8px 16px",
-        borderRadius: "4px",
+        padding: "10px 20px",
+        borderRadius: "5px",
         border: "none",
-        backgroundColor: "#fff",
+        backgroundColor: "white",
         color: "purple",
-        cursor: "pointer",
         fontWeight: "bold",
+        cursor: "pointer",
+        marginTop: "15px",
       }}
     >
       Login
